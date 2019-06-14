@@ -14,15 +14,14 @@ try {
     $mail->CharSet = "UTF-8";                                          
     $mail->SMTPAuth   = true;
     // Настройки вашей почты
-    $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера GMAIL
-    $mail->Username   = ''; // Логин на почте
-    $mail->Password   = ''; // Пароль на почте
-    $mail->SMTPSecure = 'ssl';
-    $mail->Port       = 465;
-    $mail->setFrom('', ''); // Адрес самой почты и имя отправителя
-    // Получатель письма
-    $mail->addAddress('');  
-    $mail->addAddress('klimon99@yandex.ru'); // Ещё один, если нужен
+   $mail->Host       = 'smtp.yandex.ru'; 
+$mail->Username   = ''; // login
+$mail->Password   = ''; // password
+$mail->SMTPSecure = 'ssl';
+$mail->Port       = 465;
+$mail->setFrom('', ''); // Address and name
+
+$mail->addAddress('');  // who letter
     // Прикрипление файлов к письму
 if (!empty($_FILES['myfile']['name'][0])) {
     for ($ct = 0; $ct < count($_FILES['myfile']['tmp_name']); $ct++) {
