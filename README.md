@@ -1,5 +1,5 @@
-# phpmailer
-correct settings for full work now
+# phpmailer  (correct settings for full work now)
+
 
 
   $mail->SMTPDebug = 1; //see debug message. Use 0 if use on prod 
